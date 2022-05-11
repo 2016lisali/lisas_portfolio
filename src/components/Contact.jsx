@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container, Col, Row, Form, FloatingLabel } from "react-bootstrap";
 
 export default function Contact() {
-  const [message, setMessage] = useState(false)
+  // const [message, setMessage] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
