@@ -2,8 +2,8 @@ export const webPortfolio = [
   {
     id: 1,
     title: "Jack's Garden online Plant Store",
-    img: "/jacks_garden.jpg",
-    responsive_img: "/jacks_garden_responsive.jpg",
+    img: "/assets/jacks_garden.jpg",
+    responsive_img: "/assets/jacks_garden_responsive.jpg",
     technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap",
       "Sass", "HTML&CSS"],
     description: "here should be description",
@@ -13,8 +13,8 @@ export const webPortfolio = [
   {
     id: 2,
     title: "Jack's Garden Admin Panel",
-    img: "/jacks_garden_admin_panel.jpg",
-    responsive_img: "/jacks_garden_admin_panel_responsive.jpg",
+    img: "/assets/jacks_garden_admin_panel.jpg",
+    responsive_img: "/assets/jacks_garden_admin_panel_responsive.jpg",
     technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap",
       "Sass", "HTML&CSS"],
     description: `This project is the admin panel or Jack's Garden online plant store. The site owner can
