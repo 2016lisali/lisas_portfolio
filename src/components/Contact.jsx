@@ -6,7 +6,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage(true)
+    // setMessage(true)
 
   }
   return (
