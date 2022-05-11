@@ -1,0 +1,17 @@
+$mainColor: #4CA1AF;
+$textColor: #6c757d;
+
+$width: 768px;
+
+* {
+  font-family: 'Mukta', sans-serif;
+  margin: 0;
+  // overflow-x: hidden;
+  box-sizing: border-box;
+  /* ????? */
+}
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content
+  }
+}
