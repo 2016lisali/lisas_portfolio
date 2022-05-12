@@ -79,9 +79,9 @@ export const contentPortfolio = [
     id: 3,
     title: "Markdown Previewer",
     img:
-      "/fcc_markdown_preview.jpg",
+      "/assets/fcc_markdown_preview.jpg",
     url: "https://markdownpreviewsbylisa.netlify.app",
-    responsive_img: "/fcc_markdown_preview.jpg",
+    responsive_img: "/assets/fcc_markdown_preview.jpg",
     technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap",
       "Sass", "HTML&CSS"],
     description: "here should be description",
