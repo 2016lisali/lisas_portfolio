@@ -9,6 +9,7 @@ import Topbar from "./components/Topbar";
 import "./app.scss"
 import Footer from "./components/Footer";
 import ContactList from "./components/ContactList";
+import BackToTopBtn from "./components/BackToTopBtn";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(true)
@@ -22,6 +23,7 @@ function App() {
         <Skills />
         <Contact />
       </div>
+      <BackToTopBtn />
       <Footer />
     </div>
   );
