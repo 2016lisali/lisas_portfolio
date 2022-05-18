@@ -53,17 +53,17 @@ const Skills = () => {
   return (
     <Container fluid id="skills" className="skills-container position-relative py-5">
       <Animated animationIn="bounceInUp" isVisible={true}>
-        <h1 className='text-center'>MY SKILLS</h1>
+        <h1 className='text-center mb-4'>MY SKILLS</h1>
       </Animated>
       <Container fluid="xl">
-        <Row>
-          <Col md className="text-container d-flex flex-column align-items-center justify-content-center fs-5 px-4">
-            <p>I'm a Web Developer located in Brisbane. I have a serious passion in
-              UI effects, animations and creating intuitive, dynamic user experiences.
-            </p>
-            <p>Well-organised person, problem solver, independent employee with high attention to detail.
-            </p>
-            <p>Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
+        <Row className="align-items-center">
+          <Col md className="text-container fs-5 px-4">
+            <h4>Front-End</h4>
+            <p>React, Javascript, HTML, CSS, Sass, Bootstrap, Responsive Design</p>
+            <h4>Back-End</h4>
+            <p>Node, Express, MySQL, RestAPI, MongoDB</p>
+            <h4>Other Skills</h4>
+            <p>Git, Github, Devtools</p>
           </Col>
           <Col md>
             <canvas

@@ -15,11 +15,11 @@ const ProjectModal = ({ project, show, onHide }) => {
           <Button variant="link" className="position-absolute top-0 end-0 text-decoration-none text-dark" id="close-btn" onClick={onHide}>
             X
           </Button>
-          <Row>
+          <Row className='d-flex'>
             <Col lg={7} className="p-0">
               <Image fluid src={project?.responsive_img} />
             </Col>
-            <Col lg={5} className="d-flex flex-column justify-content-between py-2">
+            <Col lg={5} className="d-flex flex-column justify-content-between ps-3 mt-3 mt-md-0">
               <div>
                 <p className='mb-1'>PROJECT</p>
                 <h3 className="fw-bold mb-3">{project?.title}</h3>
@@ -29,11 +29,11 @@ const ProjectModal = ({ project, show, onHide }) => {
                   ))}
                 </ul>
                 <h6>ABOUT</h6>
-                <p>{project?.description}</p>
+                <div>{project?.description.split("linebreak").map(line => <p>{line}</p>)}</div>
               </div>
-              <div className="d-flex justify-content-end">
-                <Button variant='secondary' className="me-2" href={project?.url}><EyeFill /> Demo</Button>
-                <Button variant='outline-secondary' href={project?.code}><CodeSlash /> Code</Button>
+              <div className="text-end mt-auto">
+                <Button variant='secondary' className="me-2" href={project?.demo} target="_blank"><EyeFill /> Demo</Button>
+                <Button variant='outline-secondary' href={project?.code} target="_blank"><CodeSlash /> Code</Button>
               </div>
             </Col>
           </Row>
