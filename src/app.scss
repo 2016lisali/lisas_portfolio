@@ -1,16 +1,5 @@
 @import "./global.scss";
-.app {
-  .sections {
-    width: 100%;
-    position: relative;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none; // for firefox
-    ::-webkit-scrollbar {
-      display: none; // for chrome safri edge
-    }
-  }
-}
+
 #contact {
   textarea {
     height: 160px;
@@ -60,48 +49,114 @@
     }
   }
 }
-.skills-container {
-  background-color: #4796a3;
-  color:white;
 
-  h1 {
-    font-size: 50px;
-
-    @include mobile {
-      font-size: 20px;
+.app {
+  .sections {
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; // for firefox
+    ::-webkit-scrollbar {
+      display: none; // for chrome safri edge
     }
   }
-  .text-container {
-    text-align: justify;
+}
+
+.contact {
+  position: fixed;
+  top: 50vh;
+  left: -8.1rem;
+  transform: translateY(-50%);
+  // overflow: auto;
+  z-index: 99;
+  &__list
+  {
+      list-style: none;
+      overflow-x: visible;
+  }
+  &__link 
+  {
+      &:visited, &:link
+      {
+          display: block;
+          color: white;
+          font-size: 1.5rem;
+          padding: 5px 12px 5px 2px;
+          transition: all 450ms ease;
+          text-decoration: none;
+          @media only screen and (max-width: 31.25em)
+          {
+            font-size: 1.2rem;
+              padding: 2px 6px 2px 2px;
+          }
+      }
+      &--linkedin {background-color: #0073b1}
+      &--github {background-color: rgb(50, 49, 49)}
+      &--email {background-color: #e9c46a}
+      &--resume {background-color: #83c5be}
+      &:hover, &:active, &:focus
+      {
+          transform: translateX(4.5rem);
+      }
+  }
+  &__label 
+  {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 13px;
+      margin-right: 0.5rem;
+      width: 5.8rem;
+      letter-spacing: 1px;
+      text-align: right;
+
   }
 }
+
 .intro {
   top: 60px;
   height: calc(100vh - 60px);
   background-image: linear-gradient(to right, #4CA1AF, #c1d3fa);
-  .Typewriter {
-    .Typewriter__wrapper {
-          h1 {
-      font-size: 80px;
-      color: white;
-      text-align: center;
-      @include mobile {
-        font-size: 40px;
-      }
-      span {
-        color:white;
-        transition: color 0.3s;
-        &:hover {
-          color: $textColor;
-        }
-      }
-    }
+  // .Typewriter {
+  //   .Typewriter__wrapper {
+  //         h1 {
+  //     font-size: 80px;
+  //     color: white;
+  //     text-align: center;
+  //     @include mobile {
+  //       font-size: 40px;
+  //     }
+  //     span {
+  //       color:white;
+  //       transition: color 0.3s;
+  //       &:hover {
+  //         color: $textColor;
+  //       }
+  //     }
+  //   }
 
-    } 
+  //   } 
 
-  }
-  .Typewriter__cursor {
-    display: none;
+  // }
+  // .Typewriter__cursor {
+  //   display: none;
+  // }
+  .introContent {
+
+          font-size: 80px;
+          color: white;
+          text-align: center;
+          @include mobile {
+            font-size: 40px;
+          }
+          span {
+            color:white;
+            transition: color 0.3s;
+            &:hover {
+              color: $textColor;
+            }
+          }
+
   }
   a.left, a.right {
     position: absolute;
@@ -179,6 +234,7 @@ a.contact-btn {
     }
   }
 }
+
 .navbar {
   // .navbar-brand {
   //   font-family: 'Carattere', cursive;
@@ -271,7 +327,7 @@ a.contact-btn {
         img {
           z-index:0;
           transform: scale(1.02);
-          filter: brightness(0.9);
+          filter: brightness(0.7);
           transition: .5s ease;
         }
       }
@@ -286,52 +342,19 @@ a.contact-btn {
   }
 }
 
-.contact {
-    position: fixed;
-    top: 50vh;
-    left: -8.1rem;
-    transform: translateY(-50%);
-    // overflow: auto;
-    z-index: 99;
-    &__list
-    {
-        list-style: none;
-        overflow-x: visible;
-    }
-    &__link 
-    {
-        &:visited, &:link
-        {
-            display: block;
-            color: white;
-            font-size: 1.5rem;
-            padding: 5px 12px 5px 2px;
-            transition: all 450ms ease;
-            text-decoration: none;
-            @media only screen and (max-width: 31.25em)
-            {
-              font-size: 1.2rem;
-                padding: 2px 6px 2px 2px;
-            }
-        }
-        &--linkedin {background-color: #0073b1}
-        &--github {background-color: rgb(50, 49, 49)}
-        &--email {background-color: #e9c46a}
-        &--resume {background-color: #83c5be}
-        &:hover, &:active, &:focus
-        {
-            transform: translateX(4.5rem);
-        }
-    }
-    &__label 
-    {
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 13px;
-        margin-right: 0.5rem;
-        width: 5.8rem;
-        letter-spacing: 1px;
-        text-align: right;
+.skills-container {
+  background-color: #4796a3;
+  color:white;
+  font-family: 'Mukta', sans-serif;
 
+  h1 {
+    font-size: 50px;
+
+    @include mobile {
+      font-size: 20px;
     }
+  }
+  .text-container {
+    text-align: justify;
+  }
 }

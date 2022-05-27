@@ -6,10 +6,10 @@ export const webPortfolio = [
     responsive_img: "/assets/jacks_garden_responsive.jpg",
     technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap",
       "Sass", "HTML&CSS"],
-    description: `Jack's Garden is an online plant store which was created with react and react-bootstrap. linebreak
+    description: `Jack's Garden is an online plant store created with react and react-bootstrap. linebreak
     The customer can register, login, logout to the site, view products, add product to the cart and place online orders. linebreak
     You can find the backend code of this project on https://github.com/2016lisali/jacks_garden_server linebreak 
-    the admin panel code on https://github.com/2016lisali/jacks_garden_admin_panel`,
+    And the admin panel code on https://github.com/2016lisali/jacks_garden_admin_panel`,
     demo: "https://jacksgarden.netlify.app/",
     code: "https://github.com/2016lisali/jacks_garden",
   },
@@ -20,7 +20,7 @@ export const webPortfolio = [
     responsive_img: "/assets/jacks_garden_admin_panel_responsive.jpg",
     technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap",
       "Sass", "HTML&CSS"],
-    description: `Jack's Garden Admin Panel was created with react and react-bootstrap. It is the admin dashboard of Jack's Garden Online Shop. linebreak
+    description: `This project is the Admin Panel of Jack's Garden Online Shop. linebreak
     The admin can login, logout to the site, create/read/update/delete product, create/read/update/delete customer account, read/delete orders and update order status.linebreak
     You can find the backend code of this project on https://github.com/2016lisali/jacks_garden_server linebreak
     the online store code on https://github.com/2016lisali/jacks_garden`,

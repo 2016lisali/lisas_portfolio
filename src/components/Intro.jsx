@@ -1,12 +1,12 @@
 import { Animated } from "react-animated-css";
 import { ArrowDownShort } from "react-bootstrap-icons";
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 
 export default function Intro() {
   return (
     <div className='intro d-flex align-items-center justify-content-center position-relative mb-5' id="intro">
       <div className="container d-flex flex-column justify-content-center align-items-center fluid-xl ps-5 ps-md-3">
-        <Typewriter
+        {/* <Typewriter
           onInit={(typewriter) => {
             typewriter
               .changeDelay(50)
@@ -14,8 +14,13 @@ export default function Intro() {
               .typeString('<h1><strong><span>A</span> <span>Web</span> <span>Developer</span>.</strong></h1>')
               .start();
           }}
-        />
-        <Animated animationIn="bounceInUp" animationInDelay={2000} isVisible={true}>
+        /> */}
+        <Animated animationIn="zoomIn" animationInDelay={200} isVisible={true} >
+          <h1 className="introContent"><strong><span>Hi</span>, <span>I</span> <span>am</span> <span>Lisa</span>. </strong></h1>
+          <h1 className="introContent"><strong><span>A</span> <span>Web</span> <span>Developer</span>.</strong></h1>
+        </Animated>
+
+        <Animated animationIn="bounceInUp" animationInDelay={600} isVisible={true}>
           <a className="contact-btn d-flex justify-content-center align-items-center mt-5" href="#portfolio">
             <span>VIEW PROJECTS</span>
           </a>

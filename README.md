@@ -2,7 +2,7 @@
 
 The idea behind this project was to create a showcase of all my big projects during my study at Tafe QLD. This is a Single Page Application and is built with React and React-bootstrap.
 
-![site image](https://github.com/2016lisali/lisali/blob/main/public/assets/lisas_portfolio_responsive.jpg)
+![site image](https://github.com/2016lisali/lisas_portfolio/blob/main/public/assets/lisas_portfolio_responsive.jpg)
 
 ## Features
 
@@ -44,7 +44,7 @@ You can find the demo [here](https://wonderlisa.netlify.app/)
 3. Sing in to https://www.emailjs.com/, get your service_id, template_id and public_key.
 4. Create a `.env` file and enter following fields
    ```env
-    PORT = YOUR PORTNUMBER
+    PORT = YOUR PORT NUMBER
     REACT_APP_SERVICE_ID = YOUR SERVICE ID
     REACT_APP_TEMPLATE_ID = YOUR_TEMPLATE_ID
     REACT_APP_PUBLIC_KEY = PUBLIC_KEY
@@ -54,7 +54,7 @@ You can find the demo [here](https://wonderlisa.netlify.app/)
    npm start
    ```
 
-The webpage will be served at http://localhost:YOUR PORT NUMBER
+The webpage will be served at http://localhost:YOUR_PORT_NUMBER
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

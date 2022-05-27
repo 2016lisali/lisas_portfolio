@@ -59,7 +59,7 @@ const Skills = () => {
         <Row className="align-items-center">
           <Col md className="text-container fs-5 px-4">
             <h4>Front-End</h4>
-            <p>React, Javascript, HTML, CSS, Sass, Bootstrap, Responsive Design</p>
+            <p>React, Redux, Javascript, HTML, CSS, Sass, Bootstrap, Responsive Design</p>
             <h4>Back-End</h4>
             <p>Node, Express, MySQL, RestAPI, MongoDB</p>
             <h4>Other Skills</h4>
