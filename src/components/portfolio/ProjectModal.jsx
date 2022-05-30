@@ -32,8 +32,8 @@ const ProjectModal = ({ project, show, onHide }) => {
                 <div>{project?.description.split("linebreak").map(line => <p>{line}</p>)}</div>
               </div>
               <div className="text-end mt-auto">
-                <Button variant='secondary' className="me-2" href={project?.demo} target="_blank"><EyeFill /> Demo</Button>
-                <Button variant='outline-secondary' href={project?.code} target="_blank"><CodeSlash /> Code</Button>
+                <Button variant='secondary' className="me-2" href={project?.demo} target="_blank" disabled={project?.demo === "#"}><EyeFill /> Demo</Button>
+                <Button variant='outline-secondary' href={project?.code} target="_blank" disabled={project?.demo === "#"}><CodeSlash /> Code</Button>
               </div>
             </Col>
           </Row>

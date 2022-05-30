@@ -41,12 +41,12 @@ export const webPortfolio = [
   },
   {
     id: 4,
-    title: "Lrs Realty",
+    title: "LRS Realty",
     img: "/assets/lrsrealty.png",
-    responsive_img: "/assets/jacks_garden_responsive.jpg",
-    technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap",
+    responsive_img: "/assets/lrsrealty.png",
+    technologies: ["Node.Js", "Express", "MongoDB", "React", "Redux", "JWT", "React-bootstrap",
       "Sass", "HTML&CSS"],
-    description: "here should be description",
+    description: "This project is under construction at the moment.",
     demo: "#",
     code: "#",
   },
@@ -113,16 +113,5 @@ export const contentPortfolio = [
     description: "This project is part of the FreeCodeCamp's front-end track. ",
     demo: "https://fcccalculatorbylisa.netlify.app",
     code: "https://github.com/2016lisali/fcc_calculator_react",
-  },
-  {
-    id: 6,
-    title: "Content Banking App",
-    img:
-      "/assets/fcc_calculator.jpg",
-    responsive_img: "/assets/fcc_calculator.jpg",
-    technologies: ["React", "Sass", "HTML&CSS"],
-    description: "here should be description",
-    demo: "#",
-    code: "#",
-  },
+  }
 ];
