@@ -34,7 +34,7 @@ export default function Contact() {
              border text-secondary p-3
              ">
               Thank you for your contact, I will get back to you in 48 hours :).</div> :
-            <><p className="text-secondary text-center">Leave your message here. I will get back to you as soon as possible.</p>
+            <><p className="text-secondary text-center">Leave your message here. I will get back to you ASAP.</p>
               <Form ref={form} className="w-100 px-4">
                 <FloatingLabel className="mb-3" label="Name">
                   <Form.Control placeholder="Name" {...register("name", { required: true, maxLength: 20, pattern: /^[a-zA-Z]*$/ })} />
