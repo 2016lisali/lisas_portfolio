@@ -16,10 +16,10 @@ The idea behind this project was to create a showcase of all my big projects dur
 
 - React
 - React-bootstrap
-- Sass
 - react-hook-form
-- typewriter-effect
 - react-animated-css
+- Sass
+- Emailjs
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

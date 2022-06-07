@@ -5,7 +5,7 @@ export const webPortfolio = [
     img: "/assets/jacks_garden.jpg",
     responsive_img: "/assets/jacks_garden_responsive.jpg",
     technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap",
-      "Sass", "HTML&CSS"],
+      "React-hook-form", "bcrypt", "yup", "service-worker", "javascript", "Sass", "HTML"],
     description: `Jack's Garden is an online plant store created with react and react-bootstrap. linebreak
     The customer can register, login, logout to the site, view products, add product to the cart and place online orders. linebreak
     You can find the backend code of this project on https://github.com/2016lisali/jacks_garden_server linebreak 
@@ -18,8 +18,8 @@ export const webPortfolio = [
     title: "Jack's Garden Admin Panel",
     img: "/assets/jacks_garden_admin_panel.jpg",
     responsive_img: "/assets/jacks_garden_admin_panel_responsive.jpg",
-    technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap",
-      "Sass", "HTML&CSS"],
+    technologies: ["Node.Js", "Express", "MySql", "React", "Redux", "JWT", "React-bootstrap", "React-chartjs",
+      "React-hook-form", "bcrypt", "yup", "javascript", "Sass", "HTML"],
     description: `This project is the Admin Panel of Jack's Garden Online Shop. linebreak
     The admin can login, logout to the site, create/read/update/delete product, create/read/update/delete customer account, read/delete orders and update order status.linebreak
     You can find the backend code of this project on https://github.com/2016lisali/jacks_garden_server linebreak
@@ -32,7 +32,7 @@ export const webPortfolio = [
     title: "Lisa's Portfolio",
     img: "/assets/lisas_portfolio.png",
     responsive_img: "/assets/lisas_portfolio_responsive.jpg",
-    technologies: ["React", "React-bootstrap", "Javascript", "Sass", "HTML&CSS"],
+    technologies: ["React", "React-bootstrap", "Javascript", "react-hook-from", "emailjs", "Sass", "HTML"],
     description: `The idea behind this project was to create a showcase of all my big projects
       during my study at Tafe QLD. This is a Single Page Application and is built using React and
       React-bootstrap.`,
@@ -73,7 +73,7 @@ export const contentPortfolio = [
       "/assets/fcc_drum_machine.jpg",
     url: "https://fccdrummachinebylisa.netlify.app/",
     responsive_img: "/assets/jacks_garden_responsive.jpg",
-    technologies: ["React", "Sass", "HTML&CSS"],
+    technologies: ["React", "Sass", "HTML"],
     description: "This project is part of the FreeCodeCamp's front-end track. ",
     demo: "https://fccdrummachinebylisa.netlify.app/",
     code: "https://github.com/2016lisali/fcc_drum_machine_react",
@@ -85,7 +85,7 @@ export const contentPortfolio = [
       "/assets/fcc_markdown_preview.jpg",
     url: "https://markdownpreviewsbylisa.netlify.app",
     responsive_img: "/assets/fcc_markdown_preview.jpg",
-    technologies: ["React", "Sass", "HTML&CSS"],
+    technologies: ["React", "Sass", "HTML"],
     description: "This project is part of the FreeCodeCamp's front-end track. ",
     demo: "https://markdownpreviewsbylisa.netlify.app",
     code: "https://github.com/2016lisali/fcc_markdown_previewer_react",
@@ -97,7 +97,7 @@ export const contentPortfolio = [
       "/assets/fcc_quote_machine.jpg",
     url: "https://randomquotemachingbylisa.netlify.app",
     responsive_img: "/assets/fcc_quote_machine.jpg",
-    technologies: ["React", "Sass", "HTML&CSS"],
+    technologies: ["React", "Sass", "HTML"],
     description: "This project is part of the FreeCodeCamp's front-end track. ",
     demo: "https://randomquotemachingbylisa.netlify.app",
     code: "https://github.com/2016lisali/fcc_random_quote_machine",
@@ -109,7 +109,7 @@ export const contentPortfolio = [
       "/assets/fcc_calculator.jpg",
     url: "https://fcccalculatorbylisa.netlify.app",
     responsive_img: "/assets/fcc_calculator.jpg",
-    technologies: ["React", "Sass", "HTML&CSS"],
+    technologies: ["React", "Sass", "HTML"],
     description: "This project is part of the FreeCodeCamp's front-end track. ",
     demo: "https://fcccalculatorbylisa.netlify.app",
     code: "https://github.com/2016lisali/fcc_calculator_react",
