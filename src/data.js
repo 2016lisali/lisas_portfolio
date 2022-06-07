@@ -42,7 +42,7 @@ export const webPortfolio = [
   {
     id: 4,
     title: "Sparkling Moment",
-    img: "/assets/sparkling_moment.png",
+    img: "/assets/sparkling_moment.jpg",
     responsive_img: "/assets/sparkling_moment.png",
     technologies: ["Node.Js", "Express", "MongoDB", "React", "Redux", "React-bootstrap",
       "Sass", "HTML"],
