@@ -43,7 +43,7 @@ export const webPortfolio = [
     id: 4,
     title: "Sparkling Moment",
     img: "/assets/sparkling_moment.jpg",
-    responsive_img: "/assets/sparkling_moment.png",
+    responsive_img: "/assets/sparkling_moment.jpg",
     technologies: ["Node.Js", "Express", "MongoDB", "React", "Redux", "React-bootstrap",
       "Sass", "HTML"],
     description: "This project is under construction at the moment.",
