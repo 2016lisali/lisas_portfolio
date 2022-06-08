@@ -24,7 +24,7 @@ const ContactList = () => {
         </li>
 
         <li className="contact__item">
-          <a href="https://drive.google.com/file/d/1zsJ5R70NIbntGt5VJFDsxAWhWjT8smft/view" target="_blank" rel="noreferrer" className="contact__link contact__link--resume">
+          <a href="https://drive.google.com/file/d/1DsH3VyUYkBhNs-TAYXIgK0ZCdWg9bo1W/view" target="_blank" rel="noreferrer" className="contact__link contact__link--resume">
             <span className="contact__label">Resume</span> <FilePersonFill />
           </a>
         </li>
