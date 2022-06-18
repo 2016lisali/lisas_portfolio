@@ -24,7 +24,7 @@ export default function Contact() {
     <Container fluid="xl" className="py-5" id="contact">
       <Row >
         <Col md className="d-flex justify-content-center align-items-center mb-5 mb-md-0">
-          <img src="./assets/keep_calm.jpg" className="" alt="keep calm" />
+          <img src="./assets/keepcalm.jpg" className="" alt="keep calm" />
         </Col>
         <Col md className="d-flex flex-column justify-content-center align-items-center">
           <h1 className="text-center">CONTACT ME</h1>
@@ -33,7 +33,7 @@ export default function Contact() {
              justify-content-center align-items-center
              border text-secondary p-3
              ">
-              Thank you for your contact, I will get back to you in 48 hours :).</div> :
+              Thank you for your contact, I will get back to you in 48 hours.</div> :
             <><p className="text-secondary text-center">Leave your message here. I will get back to you ASAP.</p>
               <Form ref={form} className="w-100 px-4">
                 <FloatingLabel className="mb-3" label="Name">

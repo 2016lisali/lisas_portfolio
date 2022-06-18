@@ -16,8 +16,8 @@ export default function Intro() {
           }}
         /> */}
         <Animated animationIn="zoomIn" animationInDelay={200} isVisible={true} >
-          <h1 className="introContent"><strong><span>Hi</span>, <span>I</span> <span>am</span> <span>Lisa</span>. </strong></h1>
-          <h1 className="introContent"><strong><span>A</span> <span>Web</span> <span>Developer</span>.</strong></h1>
+          <h1 className="introContent"><strong><span>Hi</span>, <span>I</span> <span>am</span> <span>Lisa</span></strong></h1>
+          <h1 className="introContent"><strong><span>A</span> <span>Web</span> <span>Developer</span></strong></h1>
         </Animated>
 
         <Animated animationIn="bounceInUp" animationInDelay={600} isVisible={true}>

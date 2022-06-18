@@ -12,7 +12,10 @@
     }
   }
   img {
-    max-height: 360px;
+    height: 80%;
+    @include mobile {
+      height: 360px;
+    }
   }
   button {
     display: inline-block;
