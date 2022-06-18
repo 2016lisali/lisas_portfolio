@@ -23,8 +23,14 @@ export default function Contact() {
   return (
     <Container fluid="xl" className="py-5" id="contact">
       <Row >
-        <Col md className="d-flex justify-content-center align-items-center mb-5 mb-md-0">
-          <img src="./assets/keepcalm.jpg" className="" alt="keep calm" />
+        <Col md className="left d-flex flex-column justify-content-center align-items-center mb-5 mb-md-0">
+          {/* <img src="./assets/keepcalm.jpg" className="" alt="keep calm" /> */}
+          <img src="./assets/star.svg" className="mb-3" alt="star" />
+          <h3>KEEP</h3>
+          <h3>CALM</h3>
+          <p>AND</p>
+          <h3>CODE</h3>
+          <h3>ON</h3>
         </Col>
         <Col md className="d-flex flex-column justify-content-center align-items-center">
           <h1 className="text-center">CONTACT ME</h1>
