@@ -2,10 +2,7 @@ import PortfolioList from './portfolioList';
 import ProjectModal from './ProjectModal';
 import { useState, useEffect } from 'react';
 import { Button, Container } from 'react-bootstrap';
-import {
-  webPortfolio,
-  contentPortfolio
-} from "../../data"
+import { webPortfolio, contentPortfolio } from "../../data"
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("web")

@@ -359,11 +359,14 @@ a.contact-btn {
     }
   }   
   .modal {
-    .modal-body {
-      img {
-        object-fit: contain;
-      }
-    }     
+    .modalContent {
+      background-color: red !important;
+      .modal-body {
+        img {
+          object-fit: contain;
+        }
+      }    
+    } 
   }
 }
 

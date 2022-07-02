@@ -8,7 +8,6 @@ $width: 768px;
   margin: 0;
   // overflow-x: hidden;
   box-sizing: border-box;
-  /* ????? */
 }
 @mixin mobile {
   @media (max-width: #{$width}) {

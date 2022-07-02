@@ -56,15 +56,15 @@ export const webPortfolio = [
 export const contentPortfolio = [
   {
     id: 1,
-    title: "Pomodoro Clock",
+    title: "Funniest Dog",
     img:
-      "/assets/fcc_pomodoro_clock.jpg",
-    url: "https://pomodoroclockbylisa.netlify.app/",
-    responsive_img: "/assets/fcc_pomodoro_clock.jpg",
-    technologies: ["React", "Sass", "HTML"],
-    description: "This project is part of the FreeCodeCamp's front-end track. ",
-    demo: "https://pomodoroclockbylisa.netlify.app/",
-    code: "https://github.com/2016lisali/fcc_pomodoro_clock",
+      "/assets/funniestdog.jpg",
+    url: "https://funniestdog.netlify.app",
+    responsive_img: "/assets/funniestdog.jpg",
+    technologies: ["React", "Typescript", "bootstrap", "Sass", "HTML"],
+    description: "A simple website which contains a collection of funny dog gif images. Hope you will find some joy from it. ",
+    demo: "https://funniestdog.netlify.app",
+    code: "https://github.com/2016lisali/dog_gif",
   },
   {
     id: 2,
@@ -72,7 +72,7 @@ export const contentPortfolio = [
     img:
       "/assets/fcc_drum_machine.jpg",
     url: "https://fccdrummachinebylisa.netlify.app/",
-    responsive_img: "/assets/jacks_garden_responsive.jpg",
+    responsive_img: "/assets/fcc_drum_machine.jpg",
     technologies: ["React", "Sass", "HTML"],
     description: "This project is part of the FreeCodeCamp's front-end track. ",
     demo: "https://fccdrummachinebylisa.netlify.app/",
@@ -113,5 +113,17 @@ export const contentPortfolio = [
     description: "This project is part of the FreeCodeCamp's front-end track. ",
     demo: "https://fcccalculatorbylisa.netlify.app",
     code: "https://github.com/2016lisali/fcc_calculator_react",
+  },
+  {
+    id: 6,
+    title: "Pomodoro Clock",
+    img:
+      "/assets/fcc_pomodoro_clock.jpg",
+    url: "https://pomodoroclockbylisa.netlify.app/",
+    responsive_img: "/assets/fcc_pomodoro_clock.jpg",
+    technologies: ["React", "Sass", "HTML"],
+    description: "This project is part of the FreeCodeCamp's front-end track. ",
+    demo: "https://pomodoroclockbylisa.netlify.app/",
+    code: "https://github.com/2016lisali/fcc_pomodoro_clock",
   }
 ];
