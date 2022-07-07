@@ -5,20 +5,39 @@ import { Spinner } from 'react-bootstrap';
 import { Container, Col, Row, Form, FloatingLabel } from "react-bootstrap";
 
 export default function Contact() {
+  const APIKEY = process.env.REACT_APP_APILAYER_KEY;
   const [isFetching, setIsFetching] = useState(false);
   const [isSucceed, setIsSucceed] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm()
   const form = useRef();
   const onSubmit = () => {
-    setIsFetching(true)
-    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
-      .then(() => {
-        setIsFetching(false)
-        setIsSucceed(true);
-      }, (error) => {
-        setIsFetching(false)
-        alert(error.text);
-      });
+    setIsFetching(true);
+    fetch(`https://api.apilayer.com/email_verification/${form.current.email.value}`, {
+      method: 'GET',
+      headers: {
+        "apikey": APIKEY
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.isDeliverable) {
+          sentEmail();
+        } else {
+          setIsFetching(false);
+          alert("Please enter a deliverable email")
+        }
+      }
+      )
+    const sentEmail = () => {
+      emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+        .then(() => {
+          setIsFetching(false)
+          setIsSucceed(true);
+        }, (error) => {
+          setIsFetching(false)
+          alert(error.text);
+        })
+    }
   }
   return (
     <Container fluid="xl" className="py-5" id="contact">
@@ -53,7 +72,7 @@ export default function Contact() {
                       message: 'Please enter a valid email',
                     },
                   })} />
-                  <span className="mt-1 text-danger">{errors.email && errors.email.message}</span>
+                  <span className="mt-1 text-danger">{(errors.email && errors.email.message)}</span>
                 </FloatingLabel>
                 <FloatingLabel className="mb-3" label="Subject">
                   <Form.Control type="text"
