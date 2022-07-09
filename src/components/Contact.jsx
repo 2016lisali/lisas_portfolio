@@ -22,8 +22,8 @@ export default function Contact() {
   }
   return (
     <Container fluid="xl" className="py-5" id="contact">
-      <Row >
-        <Col md className="left d-flex flex-column justify-content-center align-items-center mb-5 mb-md-0">
+      <Row className="d-flex align-items-center">
+        <Col md className="left d-flex flex-column justify-content-center align-items-center mb-5 mb-md-0 pb-3">
           {/* <img src="./assets/keepcalm.jpg" className="" alt="keep calm" /> */}
           <img src="./assets/star.svg" className="mb-3" alt="star" />
           <h3>KEEP</h3>
