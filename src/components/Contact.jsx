@@ -20,7 +20,8 @@ export default function Contact() {
     })
       .then(res => res.json())
       .then(data => {
-        if (data.isDeliverable) {
+        console.log("data.isDeliverable", data);
+        if (data.is_deliverable) {
           sentEmail();
         } else {
           setIsFetching(false);
