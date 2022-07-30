@@ -9,16 +9,20 @@ const skills = [
   { href: '#sass_', title: 'SASS' },
   { href: '#html_', title: 'HTML' },
   { href: '#react_', title: 'REACT' },
-  { href: '#python_', title: 'JS' },
+  { href: '#js_', title: 'JAVASCRIPT' },
+  { href: '#ts_', title: 'TYPESCRIPT' },
   { href: '#node_', title: 'NODE.JS' },
   { href: '#express_', title: 'EXPRESS' },
-  { href: '#sql_', title: 'SQL' },
+  { href: '#sql_', title: 'MYSQL' },
   { href: '#mongodb_', title: 'MONGODB' },
   { href: '#bootstrap_', title: 'BOOTSTRAP' },
   { href: '#npm_', title: 'NPM' },
-  { href: '#es6_', title: 'ES6' }
-];
+  { href: '#es6_', title: 'ES6' },
+  { href: '#mui_', title: 'MUI' },
+  { href: '#jira_', title: 'JIRA' },
+  { href: '#redux_', title: 'REDUX' },
 
+];
 
 const Skills = () => {
   useEffect(() => {
@@ -59,11 +63,11 @@ const Skills = () => {
         <Row className="align-items-center">
           <Col md className="text-container fs-5 px-4">
             <h4>Front-End</h4>
-            <p>React, Redux, Javascript, HTML, CSS, Sass, Bootstrap, Responsive Design ...</p>
+            <p>React, Redux, Javascript, TypeScript, MUI, Bootstrap, HTML, CSS, Sass, Responsive Design ...</p>
             <h4>Back-End</h4>
             <p>Node.js, Express.js, RestAPI, MySQL, MongoDB ...</p>
             <h4>Other Skills</h4>
-            <p>Git, Github, GIMP, Devtools ...</p>
+            <p>Git, Github, GIMP, Jira, testing with Jest and Enzyme, Devtools ...</p>
           </Col>
           <Col md>
             <canvas
