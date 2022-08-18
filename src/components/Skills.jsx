@@ -21,6 +21,8 @@ const skills = [
   { href: "#mui_", title: "MUI" },
   { href: "#jira_", title: "JIRA" },
   { href: "#redux_", title: "REDUX" },
+  { href: "#jest_", title: "JEST" },
+  { href: "#enzyme_", title: "ENZYME" },
 ];
 
 const Skills = () => {
