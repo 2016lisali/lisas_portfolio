@@ -8,6 +8,7 @@ export default function Contact() {
   const APIKEY = process.env.REACT_APP_APILAYER_KEY;
   const [isFetching, setIsFetching] = useState(false);
   const [isSucceed, setIsSucceed] = useState(false);
+  const [emailError, setEmailError] = useState(null);
   const {
     register,
     handleSubmit,
@@ -28,15 +29,15 @@ export default function Contact() {
       .then((res) => res.json())
       .then((data) => {
         console.log("data.isDeliverable", data);
-        if (data.is_deliverable) {
-          sentEmail();
-        } else {
+        if (!data.is_deliverable) {
           setIsFetching(false);
-          alert("Please enter a deliverable email");
+          setEmailError("Please enter a deliverable email address");
+          throw new Error("undeliverable email")
         }
+        sentEmail();
       });
-    const sentEmail = () => {
-      emailjs
+    const sentEmail = async () => {
+      await emailjs
         .sendForm(
           process.env.REACT_APP_SERVICE_ID,
           process.env.REACT_APP_TEMPLATE_ID,
@@ -46,11 +47,12 @@ export default function Contact() {
         .then(
           () => {
             setIsFetching(false);
+            setEmailError(false);
             setIsSucceed(true);
           },
           (error) => {
             setIsFetching(false);
-            alert(error.text);
+            setEmailError("Something went wrong, please try again later");
           }
         );
     };
@@ -75,93 +77,88 @@ export default function Contact() {
           className="d-flex flex-column justify-content-center align-items-center"
         >
           <h1 className="text-center">CONTACT ME</h1>
-          {isSucceed ? (
-            <div
-              className="fs-5 h-100 w-100 d-flex
-             justify-content-center align-items-center
-             border text-secondary p-3
-             "
-            >
-              Thank you for your contact, I will get back to you in 48 hours.
+          <p className="text-secondary text-center">
+            Leave your message here. I will get back to you ASAP.
+          </p>
+          <Form ref={form} className="w-100 px-4">
+            <FloatingLabel className="mb-3" label="Name">
+              <Form.Control
+                placeholder="Name"
+                {...register("name", {
+                  required: true,
+                  maxLength: 20,
+                  pattern: /^[a-zA-Z]*$/,
+                })}
+              />
+              <span className="mt-1 text-danger">
+                {errors.name &&
+                  "name can not be empty and max lenth is 20."}
+              </span>
+            </FloatingLabel>
+            <FloatingLabel className="mb-3" label="Email">
+              <Form.Control
+                type="email"
+                placeholder="Email"
+                {...register("email", {
+                  required: "Email can not be empty",
+                  pattern: {
+                    value:
+                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "Please enter a valid email",
+                  },
+                })}
+              />
+              <span className="mt-1 text-danger">
+                {errors.email && errors.email.message}
+              </span>
+            </FloatingLabel>
+            <FloatingLabel className="mb-3" label="Subject">
+              <Form.Control
+                type="text"
+                placeholder="Subject"
+                {...register("subject", { required: true, maxLength: 50 })}
+              />
+              <span className="mt-1 text-danger">
+                {errors.subject &&
+                  "subject can not be empty and max lenth is 50."}
+              </span>
+            </FloatingLabel>
+            <FloatingLabel className="mb-3" label="Message">
+              <Form.Control
+                as="textarea"
+                placeholder="Message"
+                {...register("message", {
+                  required: true,
+                  maxLength: 1000,
+                })}
+              />
+              <span className="mt-1 text-danger">
+                {errors.name &&
+                  "message can not be empty and max lenth is 1000."}
+              </span>
+            </FloatingLabel>
+            <div className="d-flex justify-content-center justify-content-md-end">
+              <button onClick={handleSubmit(onSubmit)}>
+                {isFetching ? (
+                  <Spinner
+                    animation="border"
+                    variant="secondary"
+                    size="sm"
+                  />
+                ) : (
+                  <span>Submit</span>
+                )}
+              </button>
             </div>
-          ) : (
-            <>
-              <p className="text-secondary text-center">
-                Leave your message here. I will get back to you ASAP.
-              </p>
-              <Form ref={form} className="w-100 px-4">
-                <FloatingLabel className="mb-3" label="Name">
-                  <Form.Control
-                    placeholder="Name"
-                    {...register("name", {
-                      required: true,
-                      maxLength: 20,
-                      pattern: /^[a-zA-Z]*$/,
-                    })}
-                  />
-                  <span className="mt-1 text-danger">
-                    {errors.name &&
-                      "name can not be empty and max lenth is 20."}
-                  </span>
-                </FloatingLabel>
-                <FloatingLabel className="mb-3" label="Email">
-                  <Form.Control
-                    type="email"
-                    placeholder="Email"
-                    {...register("email", {
-                      required: "Email can not be empty",
-                      pattern: {
-                        value:
-                          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                        message: "Please enter a valid email",
-                      },
-                    })}
-                  />
-                  <span className="mt-1 text-danger">
-                    {errors.email && errors.email.message}
-                  </span>
-                </FloatingLabel>
-                <FloatingLabel className="mb-3" label="Subject">
-                  <Form.Control
-                    type="text"
-                    placeholder="Subject"
-                    {...register("subject", { required: true, maxLength: 50 })}
-                  />
-                  <span className="mt-1 text-danger">
-                    {errors.subject &&
-                      "subject can not be empty and max lenth is 50."}
-                  </span>
-                </FloatingLabel>
-                <FloatingLabel className="mb-3" label="Message">
-                  <Form.Control
-                    as="textarea"
-                    placeholder="Message"
-                    {...register("message", {
-                      required: true,
-                      maxLength: 1000,
-                    })}
-                  />
-                  <span className="mt-1 text-danger">
-                    {errors.name &&
-                      "message can not be empty and max lenth is 1000."}
-                  </span>
-                </FloatingLabel>
-                <div className="d-flex justify-content-center justify-content-md-end">
-                  <button onClick={handleSubmit(onSubmit)}>
-                    {isFetching ? (
-                      <Spinner
-                        animation="border"
-                        variant="secondary"
-                        size="sm"
-                      />
-                    ) : (
-                      <span>Submit</span>
-                    )}
-                  </button>
-                </div>
-              </Form>
-            </>
-          )}
+          </Form>
+          <div className={`fs-5 d-flex w-100 ${(!isSucceed && !emailError) && "invisible"}
+             justify-content-center align-items-center
+             border text-secondary mt-3 px-4 py-2 messageBox border-${isSucceed ? "success" : "danger"}
+             `}
+          >
+            {isSucceed && <p className="text-secondary text-center">Thank you for your contact, I will get back to you in 48 hours.</p>}
+            {emailError && <p className="text-danger text-center">{emailError}</p>}
+          </div>
         </Col>
       </Row>
     </Container>

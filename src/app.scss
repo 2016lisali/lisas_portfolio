@@ -2,6 +2,10 @@
 
 #contact {
   color: $mainColor;
+
+  div.messageBox {
+    height: 80px;
+  }
   textarea {
     height: 160px;
     width: 100%;
