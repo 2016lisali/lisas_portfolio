@@ -12,9 +12,9 @@
     @include mobile {
       font-size: 30px;
     }
-  } 
+  }
   .left {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     h3 {
       font-size: 75px;
       // font-weight: 600;
@@ -24,17 +24,17 @@
       }
     }
     p {
-      font-size:30px;
-      margin-bottom: 0;;
+      font-size: 30px;
+      margin-bottom: 0;
     }
-    img{
+    img {
       animation-name: spin;
       animation-duration: 5000ms;
       animation-iteration-count: infinite;
-      animation-timing-function: linear; 
+      animation-timing-function: linear;
     }
   }
-  
+
   button {
     display: inline-block;
     width: 200px;
@@ -44,13 +44,13 @@
     color: $mainColor;
     border: 2px solid $mainColor;
     position: relative;
-    transition: all .35s;
-    
+    transition: all 0.35s;
+
     span {
-    position: relative;
-    z-index: 6;
+      position: relative;
+      z-index: 6;
     }
-    &:after{
+    &:after {
       position: absolute;
       content: "";
       top: 0;
@@ -58,14 +58,14 @@
       width: 0;
       height: 100%;
       background: $mainColor;
-      transition: all .5s;
+      transition: all 0.5s;
     }
-    
-    &:hover{
+
+    &:hover {
       color: white;
     }
-    
-    &:hover:after{
+
+    &:hover:after {
       width: 100%;
     }
   }
@@ -95,53 +95,57 @@
   transform: translateY(-50%);
   // overflow: auto;
   z-index: 99;
-  &__list
-  {
-      list-style: none;
-      overflow-x: visible;
+  &__list {
+    list-style: none;
+    overflow-x: visible;
   }
-  &__link 
-  {
-      &:visited, &:link
-      {
-          display: block;
-          color: white;
-          font-size: 1.5rem;
-          padding: 5px 12px 5px 2px;
-          transition: all 450ms ease;
-          text-decoration: none;
-          @media only screen and (max-width: 31.25em)
-          {
-            font-size: 1.2rem;
-              padding: 2px 6px 2px 2px;
-          }
+  &__link {
+    &:visited,
+    &:link {
+      display: block;
+      color: white;
+      font-size: 1.5rem;
+      padding: 5px 12px 5px 2px;
+      transition: all 450ms ease;
+      text-decoration: none;
+      @media only screen and (max-width: 31.25em) {
+        font-size: 1.2rem;
+        padding: 2px 6px 2px 2px;
       }
-      &--linkedin {background-color: #0073b1}
-      &--github {background-color: rgb(50, 49, 49)}
-      &--email {background-color: #e9c46a}
-      &--resume {background-color: #83c5be}
-      &:hover, &:active, &:focus
-      {
-          transform: translateX(4.5rem);
-      }
+    }
+    &--linkedin {
+      background-color: #0073b1;
+    }
+    &--github {
+      background-color: rgb(50, 49, 49);
+    }
+    &--email {
+      background-color: #e9c46a;
+    }
+    &--resume {
+      background-color: #83c5be;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateX(4.5rem);
+    }
   }
-  &__label 
-  {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 13px;
-      margin-right: 0.5rem;
-      width: 5.8rem;
-      letter-spacing: 1px;
-      text-align: right;
-
+  &__label {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    margin-right: 0.5rem;
+    width: 5.8rem;
+    letter-spacing: 1px;
+    text-align: right;
   }
 }
 
 .intro {
   top: 60px;
   height: calc(100vh - 60px);
-  background-image: linear-gradient(to right, #4CA1AF, #c1d3fa);
+  background-image: linear-gradient(to right, #4ca1af, #c1d3fa);
   // .Typewriter {
   //   .Typewriter__wrapper {
   //         h1 {
@@ -160,30 +164,29 @@
   //     }
   //   }
 
-  //   } 
+  //   }
 
   // }
   // .Typewriter__cursor {
   //   display: none;
   // }
   .introContent {
-
-          font-size: 80px;
-          color: white;
-          text-align: center;
-          @include mobile {
-            font-size: 40px;
-          }
-          span {
-            color:white;
-            transition: color 0.3s;
-            &:hover {
-              color: $textColor;
-            }
-          }
-
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    @include mobile {
+      font-size: 40px;
+    }
+    span {
+      color: white;
+      transition: color 0.3s;
+      &:hover {
+        color: $textColor;
+      }
+    }
   }
-  a.left, a.right {
+  a.left,
+  a.right {
     position: absolute;
     z-index: 90;
     bottom: 30px;
@@ -193,7 +196,7 @@
       text-orientation: mixed;
     }
     svg {
-      font-size: 20px;   
+      font-size: 20px;
     }
   }
   a.left {
@@ -210,20 +213,20 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-}
-  
-  .custom-shape-divider-bottom-1651039151 svg {
-      position: relative;
-      display: block;
-      width: calc(112% + 1.3px);
-      height: 130px;
-  }
-  
-  .custom-shape-divider-bottom-1651039151 .shape-fill {
-      fill: rgb(248,249,250);
   }
 
-a.contact-btn {
+  .custom-shape-divider-bottom-1651039151 svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 130px;
+  }
+
+  .custom-shape-divider-bottom-1651039151 .shape-fill {
+    fill: rgb(248, 249, 250);
+  }
+
+  a.contact-btn {
     // overflow: hidden;
     display: inline-block;
     width: 200px;
@@ -233,13 +236,13 @@ a.contact-btn {
     color: #fff;
     border: 2px solid #fff;
     position: relative;
-    transition: all .35s;
-    
+    transition: all 0.35s;
+
     span {
-    position: relative;
-    z-index: 6;
+      position: relative;
+      z-index: 6;
     }
-    &:after{
+    &:after {
       position: absolute;
       content: "";
       top: 0;
@@ -247,14 +250,14 @@ a.contact-btn {
       width: 0;
       height: 100%;
       background: #fff;
-      transition: all .5s;
+      transition: all 0.5s;
     }
-    
-    &:hover{
+
+    &:hover {
       color: $mainColor;
     }
-    
-    &:hover:after{
+
+    &:hover:after {
       width: 100%;
     }
   }
@@ -266,9 +269,10 @@ a.contact-btn {
   // }
   .navbar-toggler {
     padding: 4px !important;
-    &:active, &:focus {
-        outline: none;
-        box-shadow: none;
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: none;
     }
   }
   .icon {
@@ -307,7 +311,7 @@ a.contact-btn {
     @include mobile {
       margin-right: 10px;
     }
-  
+
     &.active {
       background-color: $mainColor;
       color: white;
@@ -321,10 +325,10 @@ a.contact-btn {
       overflow-y: hidden;
       color: white;
       position: relative;
-      transition: .5s ease;
+      transition: 0.5s ease;
       cursor: pointer;
 
-      &:hover button{
+      &:hover button {
         display: inline-block;
       }
 
@@ -345,20 +349,20 @@ a.contact-btn {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(.9) contrast(1.2);
+        filter: brightness(0.9) contrast(1.2);
         z-index: 1;
       }
 
       &:hover {
         img {
-          z-index:0;
+          z-index: 0;
           transform: scale(1.02);
           filter: brightness(0.7);
-          transition: .5s ease;
+          transition: 0.5s ease;
         }
       }
     }
-  }   
+  }
   .modal {
     .modalContent {
       background-color: red !important;
@@ -366,15 +370,15 @@ a.contact-btn {
         img {
           object-fit: contain;
         }
-      }    
-    } 
+      }
+    }
   }
 }
 
 .skills-container {
   background-color: #4796a3;
-  color:white;
-  font-family: 'Mukta', sans-serif;
+  color: white;
+  font-family: "Mukta", sans-serif;
 
   h1 {
     font-size: 50px;
@@ -389,9 +393,9 @@ a.contact-btn {
 
 @keyframes spin {
   from {
-      transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }

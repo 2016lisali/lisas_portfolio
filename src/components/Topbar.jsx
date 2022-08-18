@@ -1,9 +1,16 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from "react-bootstrap";
 export default function Topbar() {
   return (
-    <Navbar expand="md" bg="white" collapseOnSelect className='fixed-top shadow-sm'>
+    <Navbar
+      expand="md"
+      bg="white"
+      collapseOnSelect
+      className="fixed-top shadow-sm"
+    >
       <Container fluid="xl">
-        <Navbar.Brand href="#intro" className="fs-4">LISA LI</Navbar.Brand>
+        <Navbar.Brand href="#intro" className="fs-4">
+          LISA LI
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="ms-auto ms-3 mb-2 mb-md-0">
@@ -13,5 +20,6 @@ export default function Topbar() {
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>)
+    </Navbar>
+  );
 }

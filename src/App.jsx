@@ -6,13 +6,13 @@ import Contact from "./components/Contact";
 import Intro from "./components/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
 import Topbar from "./components/Topbar";
-import "./app.scss"
+import "./app.scss";
 import Footer from "./components/Footer";
 import ContactList from "./components/ContactList";
 import BackToTopBtn from "./components/BackToTopBtn";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(true);
   return (
     <div className="app bg-light">
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
