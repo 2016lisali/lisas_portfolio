@@ -12,21 +12,21 @@ import ContactList from "./components/ContactList";
 import BackToTopBtn from "./components/BackToTopBtn";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(true);
-  return (
-    <div className="app bg-light">
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <ContactList />
-      <div className="sections">
-        <Intro />
-        <Portfolio />
-        <Skills />
-        <Contact />
-      </div>
-      <BackToTopBtn />
-      <Footer />
-    </div>
-  );
+    const [menuOpen, setMenuOpen] = useState(true);
+    return (
+        <div className="app bg-light">
+            <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <ContactList />
+            <div className="sections">
+                <Intro />
+                <Portfolio />
+                <Skills />
+                <Contact />
+            </div>
+            <BackToTopBtn />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

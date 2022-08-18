@@ -1,405 +1,405 @@
 @import "./global.scss";
 
 #contact {
-  color: $mainColor;
-
-  div.messageBox {
-    height: 80px;
-  }
-  textarea {
-    height: 160px;
-    width: 100%;
-  }
-  h1 {
-    font-size: 50px;
-    color: $textColor;
-    @include mobile {
-      font-size: 30px;
-    }
-  }
-  .left {
-    font-family: "Montserrat", sans-serif;
-    h3 {
-      font-size: 75px;
-      // font-weight: 600;
-      line-height: 1.1;
-      @include mobile {
-        font-size: 60px;
-      }
-    }
-    p {
-      font-size: 30px;
-      margin-bottom: 0;
-    }
-    img {
-      animation-name: spin;
-      animation-duration: 5000ms;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-    }
-  }
-
-  button {
-    display: inline-block;
-    width: 200px;
-    height: 48px;
-    text-decoration: none;
-    background-color: transparent;
     color: $mainColor;
-    border: 2px solid $mainColor;
-    position: relative;
-    transition: all 0.35s;
 
-    span {
-      position: relative;
-      z-index: 6;
+    div.messageBox {
+        height: 80px;
     }
-    &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: $mainColor;
-      transition: all 0.5s;
+    textarea {
+        height: 160px;
+        width: 100%;
+    }
+    h1 {
+        font-size: 50px;
+        color: $textColor;
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+    .left {
+        font-family: "Montserrat", sans-serif;
+        h3 {
+            font-size: 75px;
+            // font-weight: 600;
+            line-height: 1.1;
+            @include mobile {
+                font-size: 60px;
+            }
+        }
+        p {
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+        img {
+            animation-name: spin;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
     }
 
-    &:hover {
-      color: white;
-    }
+    button {
+        display: inline-block;
+        width: 200px;
+        height: 48px;
+        text-decoration: none;
+        background-color: transparent;
+        color: $mainColor;
+        border: 2px solid $mainColor;
+        position: relative;
+        transition: all 0.35s;
 
-    &:hover:after {
-      width: 100%;
+        span {
+            position: relative;
+            z-index: 6;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $mainColor;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            color: white;
+        }
+
+        &:hover:after {
+            width: 100%;
+        }
     }
-  }
 }
 
 .app {
-  .sections {
-    width: 100%;
-    position: relative;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none; // for firefox
-    ::-webkit-scrollbar {
-      display: none; // for chrome safri edge
+    .sections {
+        width: 100%;
+        position: relative;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none; // for firefox
+        ::-webkit-scrollbar {
+            display: none; // for chrome safri edge
+        }
     }
-  }
 }
 
 .btp-btn {
-  z-index: 99;
+    z-index: 99;
 }
 
 .contact {
-  position: fixed;
-  top: 50vh;
-  left: -8.1rem;
-  transform: translateY(-50%);
-  // overflow: auto;
-  z-index: 99;
-  &__list {
-    list-style: none;
-    overflow-x: visible;
-  }
-  &__link {
-    &:visited,
-    &:link {
-      display: block;
-      color: white;
-      font-size: 1.5rem;
-      padding: 5px 12px 5px 2px;
-      transition: all 450ms ease;
-      text-decoration: none;
-      @media only screen and (max-width: 31.25em) {
-        font-size: 1.2rem;
-        padding: 2px 6px 2px 2px;
-      }
+    position: fixed;
+    top: 50vh;
+    left: -8.1rem;
+    transform: translateY(-50%);
+    // overflow: auto;
+    z-index: 99;
+    &__list {
+        list-style: none;
+        overflow-x: visible;
     }
-    &--linkedin {
-      background-color: #0073b1;
+    &__link {
+        &:visited,
+        &:link {
+            display: block;
+            color: white;
+            font-size: 1.5rem;
+            padding: 5px 12px 5px 2px;
+            transition: all 450ms ease;
+            text-decoration: none;
+            @media only screen and (max-width: 31.25em) {
+                font-size: 1.2rem;
+                padding: 2px 6px 2px 2px;
+            }
+        }
+        &--linkedin {
+            background-color: #0073b1;
+        }
+        &--github {
+            background-color: rgb(50, 49, 49);
+        }
+        &--email {
+            background-color: #e9c46a;
+        }
+        &--resume {
+            background-color: #83c5be;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            transform: translateX(4.5rem);
+        }
     }
-    &--github {
-      background-color: rgb(50, 49, 49);
+    &__label {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 13px;
+        margin-right: 0.5rem;
+        width: 5.8rem;
+        letter-spacing: 1px;
+        text-align: right;
     }
-    &--email {
-      background-color: #e9c46a;
-    }
-    &--resume {
-      background-color: #83c5be;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      transform: translateX(4.5rem);
-    }
-  }
-  &__label {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 13px;
-    margin-right: 0.5rem;
-    width: 5.8rem;
-    letter-spacing: 1px;
-    text-align: right;
-  }
 }
 
 .intro {
-  top: 60px;
-  height: calc(100vh - 60px);
-  background-image: linear-gradient(to right, #4ca1af, #c1d3fa);
-  // .Typewriter {
-  //   .Typewriter__wrapper {
-  //         h1 {
-  //     font-size: 80px;
-  //     color: white;
-  //     text-align: center;
-  //     @include mobile {
-  //       font-size: 40px;
-  //     }
-  //     span {
-  //       color:white;
-  //       transition: color 0.3s;
-  //       &:hover {
-  //         color: $textColor;
-  //       }
-  //     }
-  //   }
+    top: 60px;
+    height: calc(100vh - 60px);
+    background-image: linear-gradient(to right, #4ca1af, #c1d3fa);
+    // .Typewriter {
+    //   .Typewriter__wrapper {
+    //         h1 {
+    //     font-size: 80px;
+    //     color: white;
+    //     text-align: center;
+    //     @include mobile {
+    //       font-size: 40px;
+    //     }
+    //     span {
+    //       color:white;
+    //       transition: color 0.3s;
+    //       &:hover {
+    //         color: $textColor;
+    //       }
+    //     }
+    //   }
 
-  //   }
+    //   }
 
-  // }
-  // .Typewriter__cursor {
-  //   display: none;
-  // }
-  .introContent {
-    font-size: 80px;
-    color: white;
-    text-align: center;
-    @include mobile {
-      font-size: 40px;
+    // }
+    // .Typewriter__cursor {
+    //   display: none;
+    // }
+    .introContent {
+        font-size: 80px;
+        color: white;
+        text-align: center;
+        @include mobile {
+            font-size: 40px;
+        }
+        span {
+            color: white;
+            transition: color 0.3s;
+            &:hover {
+                color: $textColor;
+            }
+        }
     }
-    span {
-      color: white;
-      transition: color 0.3s;
-      &:hover {
-        color: $textColor;
-      }
+    a.left,
+    a.right {
+        position: absolute;
+        z-index: 90;
+        bottom: 30px;
+        animation: bounce 2s infinite;
+        p {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        svg {
+            font-size: 20px;
+        }
     }
-  }
-  a.left,
-  a.right {
-    position: absolute;
-    z-index: 90;
-    bottom: 30px;
-    animation: bounce 2s infinite;
-    p {
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
+    a.left {
+        left: 10px;
     }
-    svg {
-      font-size: 20px;
+    a.right {
+        right: 10px;
     }
-  }
-  a.left {
-    left: 10px;
-  }
-  a.right {
-    right: 10px;
-  }
-  .custom-shape-divider-bottom-1651039151 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-
-  .custom-shape-divider-bottom-1651039151 svg {
-    position: relative;
-    display: block;
-    width: calc(112% + 1.3px);
-    height: 130px;
-  }
-
-  .custom-shape-divider-bottom-1651039151 .shape-fill {
-    fill: rgb(248, 249, 250);
-  }
-
-  a.contact-btn {
-    // overflow: hidden;
-    display: inline-block;
-    width: 200px;
-    height: 48px;
-    text-decoration: none;
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    position: relative;
-    transition: all 0.35s;
-
-    span {
-      position: relative;
-      z-index: 6;
-    }
-    &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: #fff;
-      transition: all 0.5s;
+    .custom-shape-divider-bottom-1651039151 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
     }
 
-    &:hover {
-      color: $mainColor;
+    .custom-shape-divider-bottom-1651039151 svg {
+        position: relative;
+        display: block;
+        width: calc(112% + 1.3px);
+        height: 130px;
     }
 
-    &:hover:after {
-      width: 100%;
+    .custom-shape-divider-bottom-1651039151 .shape-fill {
+        fill: rgb(248, 249, 250);
     }
-  }
+
+    a.contact-btn {
+        // overflow: hidden;
+        display: inline-block;
+        width: 200px;
+        height: 48px;
+        text-decoration: none;
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        position: relative;
+        transition: all 0.35s;
+
+        span {
+            position: relative;
+            z-index: 6;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #fff;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            color: $mainColor;
+        }
+
+        &:hover:after {
+            width: 100%;
+        }
+    }
 }
 
 .navbar {
-  // .navbar-brand {
-  //   font-family: 'Carattere', cursive;
-  // }
-  .navbar-toggler {
-    padding: 4px !important;
-    &:active,
-    &:focus {
-      outline: none;
-      box-shadow: none;
+    // .navbar-brand {
+    //   font-family: 'Carattere', cursive;
+    // }
+    .navbar-toggler {
+        padding: 4px !important;
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
     }
-  }
-  .icon {
-    font-size: 20px;
-    &:hover {
-      color: $mainColor;
+    .icon {
+        font-size: 20px;
+        &:hover {
+            color: $mainColor;
+        }
     }
-  }
 }
 
 .portfolio {
-  h1 {
-    font-size: 50px;
-    color: $textColor;
+    h1 {
+        font-size: 50px;
+        color: $textColor;
 
-    @include mobile {
-      font-size: 30px;
-    }
-  }
-
-  ul {
-    margin: 10px;
-    list-style: none;
-
-    @include mobile {
-      margin: 10px 0;
-      justify-content: center;
-    }
-  }
-  .portfolioList {
-    font-size: 14px;
-    margin-right: 50px;
-    padding: 7px;
-    border-radius: 10px;
-    cursor: pointer;
-    @include mobile {
-      margin-right: 10px;
-    }
-
-    &.active {
-      background-color: $mainColor;
-      color: white;
-    }
-  }
-  .project-container {
-    .item {
-      border-radius: 10px;
-      width: 49%;
-      // height: 360px;
-      overflow-y: hidden;
-      color: white;
-      position: relative;
-      transition: 0.5s ease;
-      cursor: pointer;
-
-      &:hover button {
-        display: inline-block;
-      }
-
-      @include mobile {
-        // height: 280px;
-        width: 95%;
-      }
-      button {
-        position: absolute;
-        border-radius: 50%;
-        background-color: $mainColor;
-        height: 100px;
-        width: 100px;
-        display: none;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(0.9) contrast(1.2);
-        z-index: 1;
-      }
-
-      &:hover {
-        img {
-          z-index: 0;
-          transform: scale(1.02);
-          filter: brightness(0.7);
-          transition: 0.5s ease;
+        @include mobile {
+            font-size: 30px;
         }
-      }
     }
-  }
-  .modal {
-    .modalContent {
-      background-color: red !important;
-      .modal-body {
-        img {
-          object-fit: contain;
+
+    ul {
+        margin: 10px;
+        list-style: none;
+
+        @include mobile {
+            margin: 10px 0;
+            justify-content: center;
         }
-      }
     }
-  }
+    .portfolioList {
+        font-size: 14px;
+        margin-right: 50px;
+        padding: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        @include mobile {
+            margin-right: 10px;
+        }
+
+        &.active {
+            background-color: $mainColor;
+            color: white;
+        }
+    }
+    .project-container {
+        .item {
+            border-radius: 10px;
+            width: 49%;
+            // height: 360px;
+            overflow-y: hidden;
+            color: white;
+            position: relative;
+            transition: 0.5s ease;
+            cursor: pointer;
+
+            &:hover button {
+                display: inline-block;
+            }
+
+            @include mobile {
+                // height: 280px;
+                width: 95%;
+            }
+            button {
+                position: absolute;
+                border-radius: 50%;
+                background-color: $mainColor;
+                height: 100px;
+                width: 100px;
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(0.9) contrast(1.2);
+                z-index: 1;
+            }
+
+            &:hover {
+                img {
+                    z-index: 0;
+                    transform: scale(1.02);
+                    filter: brightness(0.7);
+                    transition: 0.5s ease;
+                }
+            }
+        }
+    }
+    .modal {
+        .modalContent {
+            background-color: red !important;
+            .modal-body {
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+    }
 }
 
 .skills-container {
-  background-color: #4796a3;
-  color: white;
-  font-family: "Mukta", sans-serif;
+    background-color: #4796a3;
+    color: white;
+    font-family: "Mukta", sans-serif;
 
-  h1 {
-    font-size: 50px;
-    @include mobile {
-      font-size: 30px;
+    h1 {
+        font-size: 50px;
+        @include mobile {
+            font-size: 30px;
+        }
     }
-  }
-  .text-container {
-    text-align: justify;
-  }
+    .text-container {
+        text-align: justify;
+    }
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
