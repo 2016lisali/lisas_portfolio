@@ -77,6 +77,29 @@ export const webPortfolio = [
     },
     {
         id: 4,
+        title: "Dev Prep",
+        img: "/assets/devprep.jpg",
+        responsive_img: "/assets/devprep_responsive.jpg",
+        technologies: [
+            "TDD",
+            "React",
+            "TypeScript",
+            "MUI",
+            "Node.Js",
+            "Express",
+            "PostgreSQL",
+            "Prisma",
+            "CSS",
+            "HTML",
+        ],
+        description: `Ongoing project. linebreak
+        A collaborative project built by 6 developers. It will be community of developers where they can share interview recounts, technological
+        findings and new open source projects.`,
+        demo: "#",
+        code: "https://github.com/DevPreps/frontend",
+    },
+    {
+        id: 5,
         title: "Sparkling Moment",
         img: "/assets/sparkling_moment.jpg",
         responsive_img: "/assets/sparkling_moment.jpg",

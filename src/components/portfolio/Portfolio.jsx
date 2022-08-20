@@ -22,7 +22,7 @@ export default function Portfolio() {
     useEffect(() => {
         switch (selected) {
             case "web":
-                setData(webPortfolio);
+                setData(webPortfolio.slice(0, 4));
                 break;
             case "content":
                 setData(contentPortfolio);

@@ -66,7 +66,7 @@ const ProjectModal = ({ project, show, onHide }) => {
                                     variant="outline-secondary"
                                     href={project?.code}
                                     target="_blank"
-                                    disabled={project?.demo === "#"}
+                                    disabled={project?.code === "#"}
                                 >
                                     <CodeSlash /> Code
                                 </Button>
