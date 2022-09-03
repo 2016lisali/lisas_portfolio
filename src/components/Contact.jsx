@@ -31,7 +31,9 @@ export default function Contact() {
                 console.log("data.isDeliverable", data);
                 if (!data.is_deliverable) {
                     setIsFetching(false);
-                    setEmailError("Please enter a deliverable email address");
+                    setEmailError(
+                        "Please enter a deliverable email address :)"
+                    );
                     throw new Error("undeliverable email");
                 }
                 sentEmail();
@@ -61,7 +63,7 @@ export default function Contact() {
     };
     return (
         <Container fluid="xl" className="py-5" id="contact">
-            <Row className="d-flex align-items-center">
+            <Row className="d-flex align-items-start">
                 <Col
                     md
                     className="left d-flex flex-column justify-content-center align-items-center mb-5 mb-md-0 pb-3"
@@ -76,13 +78,13 @@ export default function Contact() {
                 </Col>
                 <Col
                     md
-                    className="d-flex flex-column justify-content-center align-items-center"
+                    className="d-flex flex-column justify-content-center align-items-center px-4"
                 >
                     <h1 className="text-center">CONTACT ME</h1>
                     <p className="text-secondary text-center">
                         Leave your message here. I will get back to you ASAP.
                     </p>
-                    <Form ref={form} className="w-100 px-4">
+                    <Form ref={form} className="w-100">
                         <FloatingLabel className="mb-3" label="Name">
                             <Form.Control
                                 placeholder="Name"
@@ -156,23 +158,21 @@ export default function Contact() {
                         </div>
                     </Form>
                     <div
-                        className={`fs-5 d-flex w-100 ${
-                            !isSucceed && !emailError && "invisible"
-                        }
-             justify-content-center align-items-center
-             border text-secondary mt-3 px-4 py-2 messageBox border-${
-                 isSucceed ? "success" : "danger"
-             }
-             `}
+                        className={`fs-5 d-flex w-100 ${!isSucceed && !emailError && "invisible"
+                            }
+                            justify-content-center align-items-center
+                            border text-secondary mt-3 px-4 py-2 messageBox border-${isSucceed ? "success" : "danger"
+                            }
+                            `}
                     >
                         {isSucceed && (
-                            <p className="text-secondary text-center">
+                            <p className="text-secondary text-center mb-0">
                                 Thank you for your contact, I will get back to
                                 you in 48 hours.
                             </p>
                         )}
                         {emailError && (
-                            <p className="text-danger text-center">
+                            <p className="text-danger text-center mb-0">
                                 {emailError}
                             </p>
                         )}
