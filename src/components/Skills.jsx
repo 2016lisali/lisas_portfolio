@@ -11,6 +11,7 @@ const skills = [
     { href: "#react_", title: "REACT" },
     { href: "#js_", title: "JAVASCRIPT" },
     { href: "#ts_", title: "TYPESCRIPT" },
+    { href: "#python_", title: "PYTHON" },
     { href: "#node_", title: "NODE.JS" },
     { href: "#express_", title: "EXPRESS" },
     { href: "#sql_", title: "MYSQL" },
@@ -67,9 +68,11 @@ const Skills = () => {
             <Container fluid="xl">
                 <Row className="align-items-center">
                     <Col md className="text-container fs-5 px-4">
+                        <h4>Languages</h4>
+                        <p>Python, Javascript, TypeScript</p>
                         <h4>Front-End</h4>
                         <p>
-                            React, Redux, Javascript, TypeScript, MUI,
+                            React, Redux, Angular, MUI,
                             Bootstrap, HTML, CSS, Sass, Responsive Design ...
                         </p>
                         <h4>Back-End</h4>
