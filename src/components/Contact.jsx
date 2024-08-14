@@ -5,7 +5,6 @@ import { Spinner } from "react-bootstrap";
 import { Container, Col, Row, Form, FloatingLabel } from "react-bootstrap";
 
 export default function Contact() {
-    const APIKEY = process.env.REACT_APP_APILAYER_KEY;
     const [isFetching, setIsFetching] = useState(false);
     const [isSucceed, setIsSucceed] = useState(false);
     const [emailError, setEmailError] = useState(null);
@@ -15,51 +14,28 @@ export default function Contact() {
         formState: { errors },
     } = useForm();
     const form = useRef();
-    const onSubmit = () => {
+    const onSubmit = async (data) => {
         setIsFetching(true);
-        fetch(
-            `https://api.apilayer.com/email_verification/${form.current.email.value}`,
-            {
-                method: "GET",
-                headers: {
-                    apikey: APIKEY,
+        await emailjs
+            .sendForm(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
+                form.current,
+                process.env.REACT_APP_PUBLIC_KEY
+            )
+            .then(
+                () => {
+                    setIsFetching(false);
+                    setEmailError(false);
+                    setIsSucceed(true);
                 },
-            }
-        )
-            .then((res) => res.json())
-            .then((data) => {
-                console.log("data.isDeliverable", data);
-                if (!data.is_deliverable) {
+                (error) => {
                     setIsFetching(false);
                     setEmailError(
-                        "Please enter a deliverable email address :)"
+                        "Something went wrong, please try again later"
                     );
-                    throw new Error("undeliverable email");
                 }
-                sentEmail();
-            });
-        const sentEmail = async () => {
-            await emailjs
-                .sendForm(
-                    process.env.REACT_APP_SERVICE_ID,
-                    process.env.REACT_APP_TEMPLATE_ID,
-                    form.current,
-                    process.env.REACT_APP_PUBLIC_KEY
-                )
-                .then(
-                    () => {
-                        setIsFetching(false);
-                        setEmailError(false);
-                        setIsSucceed(true);
-                    },
-                    (error) => {
-                        setIsFetching(false);
-                        setEmailError(
-                            "Something went wrong, please try again later"
-                        );
-                    }
-                );
-        };
+            );
     };
     return (
         <Container fluid="xl" className="py-5" id="contact">
@@ -91,7 +67,7 @@ export default function Contact() {
                                 {...register("name", {
                                     required: true,
                                     maxLength: 20,
-                                    pattern: /^[a-zA-Z]*$/,
+                                    pattern: /^[a-z A-Z]*$/,
                                 })}
                             />
                             <span className="mt-1 text-danger">
@@ -144,7 +120,10 @@ export default function Contact() {
                             </span>
                         </FloatingLabel>
                         <div className="d-flex justify-content-center justify-content-md-end">
-                            <button onClick={handleSubmit(onSubmit)}>
+                            <button
+                                onClick={handleSubmit(onSubmit)}
+                                disabled={isFetching}
+                            >
                                 {isFetching ? (
                                     <Spinner
                                         animation="border"
@@ -158,11 +137,13 @@ export default function Contact() {
                         </div>
                     </Form>
                     <div
-                        className={`fs-5 d-flex w-100 ${!isSucceed && !emailError && "invisible"
-                            }
+                        className={`fs-5 d-flex w-100 ${
+                            !isSucceed && !emailError && "invisible"
+                        }
                             justify-content-center align-items-center
-                            border text-secondary mt-3 px-4 py-2 messageBox border-${isSucceed ? "success" : "danger"
-                            }
+                            border text-secondary mt-3 px-4 py-2 messageBox bg-${
+                                isSucceed ? "success" : "danger"
+                            } bg-opacity-25
                             `}
                     >
                         {isSucceed && (
